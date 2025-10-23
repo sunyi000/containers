@@ -1,6 +1,6 @@
-FROM nvidia/cuda:11.8.0-runtime-ubuntu22.04
+FROM ubuntu:22.04
 
-LABEL base_image="nvidia/cuda:11.8.0-runtime-ubuntu22.04"
+LABEL base_image="ubuntu:22.04"
 LABEL version="1"
 LABEL software="cellpose"
 LABEL software.version="4.0.7"
@@ -80,5 +80,4 @@ RUN pip install --no-cache-dir -U pip \
     tqdm \
     tifffile \
     fastremap \
-    torch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 --extra-index-url https://download.pytorch.org/whl/cu118 \
     'cellpose[gui]'==$CELLPOSE_VERSION
